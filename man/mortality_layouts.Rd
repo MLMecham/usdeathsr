@@ -3,15 +3,34 @@
 \docType{data}
 \name{mortality_layouts}
 \alias{mortality_layouts}
-\alias{data_multiple_mortality_1969}
-\alias{data_multiple_mortality_2023}
-\alias{data_multiple_mortality_2003}
-\alias{data_multiple_mortality_2004}
-\alias{data_multiple_mortality_2005}
-\alias{data_multiple_mortality_2006}
-\alias{data_multiple_mortality_2007}
-\alias{data_multiple_mortality_2008}
-\alias{data_multiple_mortality_2009}
+\alias{data_mortality_multiple_1968}
+\alias{data_mortality_multiple_1969}
+\alias{data_mortality_multiple_1970}
+\alias{data_mortality_multiple_1971}
+\alias{data_mortality_multiple_1972}
+\alias{data_mortality_multiple_1973}
+\alias{data_mortality_multiple_1974}
+\alias{data_mortality_multiple_1975}
+\alias{data_mortality_multiple_1976}
+\alias{data_mortality_multiple_1977}
+\alias{data_mortality_multiple_1978}
+\alias{data_mortality_multiple_1979}
+\alias{data_mortality_multiple_1980}
+\alias{data_mortality_multiple_1981}
+\alias{data_mortality_multiple_1982}
+\alias{data_mortality_multiple_1983}
+\alias{data_mortality_multiple_1984}
+\alias{data_mortality_multiple_1985}
+\alias{data_mortality_multiple_1986}
+\alias{data_mortality_multiple_1987}
+\alias{data_mortality_multiple_2003}
+\alias{data_mortality_multiple_2004}
+\alias{data_mortality_multiple_2005}
+\alias{data_mortality_multiple_2006}
+\alias{data_mortality_multiple_2007}
+\alias{data_mortality_multiple_2008}
+\alias{data_mortality_multiple_2009}
+\alias{data_mortality_multiple_2023}
 \title{Mortality multiple cause data layouts}
 \format{
 A tibble with 7 variables:
@@ -27,43 +46,119 @@ A tibble with 7 variables:
 
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 43 rows and 7 columns.
 
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 43 rows and 7 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 43 rows and 7 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 43 rows and 7 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 43 rows and 7 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 43 rows and 7 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 43 rows and 7 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 43 rows and 7 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 43 rows and 7 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 43 rows and 7 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 43 rows and 7 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 99 rows and 7 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 101 rows and 6 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 101 rows and 6 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 106 rows and 6 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 106 rows and 6 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 107 rows and 6 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 108 rows and 6 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 108 rows and 6 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 106 rows and 6 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 107 rows and 7 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 107 rows and 7 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 88 rows and 7 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 88 rows and 7 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 88 rows and 7 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 88 rows and 7 columns.
+
+An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 88 rows and 7 columns.
+
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 91 rows and 7 columns.
-
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 107 rows and 7 columns.
-
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 107 rows and 7 columns.
-
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 88 rows and 7 columns.
-
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 88 rows and 7 columns.
-
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 88 rows and 7 columns.
-
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 88 rows and 7 columns.
-
-An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 88 rows and 7 columns.
 }
 \source{
 \url{https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/DVS/mortality/}
 }
 \usage{
-data_multiple_mortality_1969
+data_mortality_multiple_1968
 
-data_multiple_mortality_2023
+data_mortality_multiple_1969
 
-data_multiple_mortality_2003
+data_mortality_multiple_1970
 
-data_multiple_mortality_2004
+data_mortality_multiple_1971
 
-data_multiple_mortality_2005
+data_mortality_multiple_1972
 
-data_multiple_mortality_2006
+data_mortality_multiple_1973
 
-data_multiple_mortality_2007
+data_mortality_multiple_1974
 
-data_multiple_mortality_2008
+data_mortality_multiple_1975
 
-data_multiple_mortality_2009
+data_mortality_multiple_1976
+
+data_mortality_multiple_1977
+
+data_mortality_multiple_1978
+
+data_mortality_multiple_1979
+
+data_mortality_multiple_1980
+
+data_mortality_multiple_1981
+
+data_mortality_multiple_1982
+
+data_mortality_multiple_1983
+
+data_mortality_multiple_1984
+
+data_mortality_multiple_1985
+
+data_mortality_multiple_1986
+
+data_mortality_multiple_1987
+
+data_mortality_multiple_2003
+
+data_mortality_multiple_2004
+
+data_mortality_multiple_2005
+
+data_mortality_multiple_2006
+
+data_mortality_multiple_2007
+
+data_mortality_multiple_2008
+
+data_mortality_multiple_2009
+
+data_mortality_multiple_2023
 }
 \description{
 Metadata tables describing the fixed-width file layout for US mortality
@@ -74,9 +169,7 @@ the corresponding fixed-width file.
 \note{
 This is an early year with limited coding — several fields left blank.
 
-This year introduced a revised race classification schema.
-
-Additional cause of death fields were added to the layout this year.
+1968-1978 all use the same user guide. We only make data_mortality_multiple_1969 because its a funny number.
 
 Geographic identifiers are present: positions 21–60 contain state,
 county, and city of both occurrence and residence, PMSA/MSA, CMSA, and
@@ -128,5 +221,9 @@ remain excluded per NCHS data access policy.
 
 Both education revision fields are present. Occupation and industry
 fields are absent.
+
+This year introduced a revised race classification schema.
+
+Additional cause of death fields were added to the layout this year.
 }
 \keyword{datasets}

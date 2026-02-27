@@ -9,52 +9,109 @@ vignette: >
 
 ## Overview
 
-This vignette walks through the full workflow of downloading, reading, and
-decoding a CDC vital statistics mortality file using the usdeaths package.
+The `usdeaths` package provides tools for downloading, reading, and decoding
+CDC vital statistics mortality files. These are fixed-width files published by
+the National Center for Health Statistics (NCHS) and cover US death records
+going back to the 1960s. Because the raw files use numeric codes rather than
+human-readable labels, working with them directly is cumbersome. This package
+handles the download, parsing, and decoding for you.
 
 ## Setup
+
 ```{r setup, message=FALSE}
 library(usdeaths)
-library(dplyr)
-library(httr2)
 ```
 
-## Get the Metadata
-```{r meta}
-meta <- data_multiple_mortality_1969
+## Quick Start
+
+For most users, `cdc_import()` is all you need. Pass it a section name and
+year and it handles everything — resolving the download URL, fetching the file
+from the CDC FTP server, reading the fixed-width format, and decoding all
+coded columns into human-readable labels:
+
+```{r import, eval=FALSE}
+mort1969 <- cdc_import("mortality_multiple", 1969)
+#> Decoding 1921990 rows...
+#> # A tibble: 1,921,990 × 43
+#>    last_digit_data_year shipment_number reporting_area  certificate_number ...
+#>    <chr>                <chr>           <chr>           <chr>
+#>  1 1969                 13              All other areas NA
+#>  2 1969                 05              All other areas NA
+#>  ...
 ```
 
-## Download the Data
+Note: these files can be several hundred megabytes and contain millions of
+records. The 1969 mortality file has nearly 2 million rows. Download and
+decode time will vary depending on your connection and hardware.
+
+## Under the Hood
+
+`cdc_import()` is a wrapper around four lower-level functions. You can call
+these individually if you need more control over any step.
+
+### Step 1: Resolve the URL
+
+`get_cdc_url()` looks up the download URL for a given section and year from
+the internal CDC link table:
+
+```{r url, eval=FALSE}
+url <- get_cdc_url("mortality_multiple", 1969)
+```
+
+### Step 2: Download
+
+`download_cdc()` fetches the zip file from the CDC FTP server and returns a
+path to a temporary file:
+
 ```{r download, eval=FALSE}
-url <- "https://ftp.cdc.gov/pub/Health_Statistics/NCHS/Datasets/DVS/mortality/mort1969us.zip"
-temp <- tempfile(fileext = ".zip")
-request(url) |>
-    req_progress() |>
-    req_perform(path = temp)
+temp <- download_cdc(url)
 ```
 
-## Unzip
-```{r unzip, eval=FALSE}
-out_dir <- tempfile()
-dir.create(out_dir)
-if (.Platform$OS.type == "windows") {
-    zip7 <- c("C:/Program Files/7-Zip/7z.exe", "C:/Program Files (x86)/7-Zip/7z.exe")
-    zip7 <- zip7[file.exists(zip7)][1]
-    if (!is.na(zip7)) {
-        system2(zip7, args = c("e", temp, paste0("-o", out_dir), "-y"))
-    } else {
-        stop("7-Zip not found.")
-    }
-} else {
-    system2("unzip", args = c(temp, "-d", out_dir))
-}
+### Step 3: Read
+
+`load_data()` needs the metadata for the year you are working with. Each
+year's file has its own fixed-width layout and code dictionary, shipped as
+a data object in the package:
+
+```{r meta, eval=FALSE}
+meta <- data_mortality_multiple_1969
+mort1969 <- load_data(temp, meta)
 ```
 
-## Read and Decode
-```{r read, eval=FALSE}
-data_file <- list.files(out_dir, full.names = TRUE)[1]
-mort1969 <- read_section(data_file, meta)
-unlink(out_dir, recursive = TRUE)
+The raw data comes back with numeric codes in every column:
 
+```{r raw, eval=FALSE}
+mort1969
+#> # A tibble: 1,921,990 × 43
+#>    last_digit_data_year shipment_number reporting_area certificate_number ...
+#>    <chr>                <chr>           <chr>          <chr>
+#>  1 9                    13              0              NA
+#>  2 9                    05              0              NA
+#>  ...
+```
+
+### Step 4: Decode
+
+`decode_all()` decodes every coded column in place and returns the full
+dataset with human-readable labels:
+
+```{r decode, eval=FALSE}
+mort1969_decoded <- decode_all(mort1969, meta)
+```
+
+## Inspecting Before Decoding
+
+For large files you may want to verify the codes are mapping correctly before
+committing to a full decode. `decode_preview()` lets you inspect a subset of
+columns and rows side by side with their decoded labels:
+
+```{r preview-default, eval=FALSE}
+# first 5 coded columns, 1000 rows
 decode_preview(mort1969, meta)
+
+# first 10 coded columns
+decode_preview(mort1969, meta, first_n = 10)
+
+# first 3 coded columns plus columns 12 and 20 specifically
+decode_preview(mort1969, meta, first_n = 3, numbers = c(12, 20))
 ```

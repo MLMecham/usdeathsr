@@ -9,7 +9,7 @@
 #'   from the CDC vital statistics FTP server.
 #' @param meta A metadata tibble with columns \code{start}, \code{end}, and
 #'   \code{name} defining the fixed-width layout, such as
-#'   \code{data_multiple_mortality_1969}.
+#'   \code{data_mortality_multiple_1969}.
 #'
 #' @return A tibble with one row per death record and one column per field
 #'   defined in \code{meta}. All columns are character type — use
@@ -17,7 +17,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' meta <- data_multiple_mortality_1969
+#' meta <- data_mortality_multiple_1969
 #' mort1969 <- read_section(data_file, meta)
 #' }
 #' @export

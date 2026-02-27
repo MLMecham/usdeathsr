@@ -41,14 +41,68 @@
 #' @name mortality_layouts
 NULL
 
-#' @rdname mortality_layouts
-#' @note This is an early year with limited coding — several fields left blank.
-"data_multiple_mortality_1969"
 
 #' @rdname mortality_layouts
-#' @note This year introduced a revised race classification schema.
-#' @note Additional cause of death fields were added to the layout this year.
-"data_multiple_mortality_2023"
+"data_mortality_multiple_1968"
+
+#' @rdname mortality_layouts
+#' @note This is an early year with limited coding — several fields left blank.
+#' @note 1968-1978 all use the same user guide. We only make data_mortality_multiple_1969 because its a funny number.
+"data_mortality_multiple_1969"
+
+#' @rdname mortality_layouts
+"data_mortality_multiple_1970"
+
+#' @rdname mortality_layouts
+"data_mortality_multiple_1971"
+
+#' @rdname mortality_layouts
+"data_mortality_multiple_1972"
+
+#' @rdname mortality_layouts
+"data_mortality_multiple_1973"
+
+#' @rdname mortality_layouts
+"data_mortality_multiple_1974"
+
+#' @rdname mortality_layouts
+"data_mortality_multiple_1975"
+
+#' @rdname mortality_layouts
+"data_mortality_multiple_1976"
+
+#' @rdname mortality_layouts
+"data_mortality_multiple_1977"
+
+#' @rdname mortality_layouts
+"data_mortality_multiple_1978"
+
+#' @rdname mortality_layouts
+"data_mortality_multiple_1979"
+
+#' @rdname mortality_layouts
+"data_mortality_multiple_1980"
+
+#' @rdname mortality_layouts
+"data_mortality_multiple_1981"
+
+#' @rdname mortality_layouts
+"data_mortality_multiple_1982"
+
+#' @rdname mortality_layouts
+"data_mortality_multiple_1983"
+
+#' @rdname mortality_layouts
+"data_mortality_multiple_1984"
+
+#' @rdname mortality_layouts
+"data_mortality_multiple_1985"
+
+#' @rdname mortality_layouts
+"data_mortality_multiple_1986"
+
+#' @rdname mortality_layouts
+"data_mortality_multiple_1987"
 
 #' @rdname mortality_layouts
 #' @note Geographic identifiers are present: positions 21–60 contain state,
@@ -60,7 +114,7 @@ NULL
 #' @note \code{record_type} is present at position 19. \code{marital_status}
 #'   includes code \code{N} (not on certificate). Occupation and industry fields
 #'   are absent.
-"data_multiple_mortality_2003"
+"data_mortality_multiple_2003"
 
 #' @rdname mortality_layouts
 #' @note Layout is structurally identical to 2003, retaining full geographic
@@ -68,7 +122,7 @@ NULL
 #' @note \code{record_type} is present at position 19. \code{marital_status}
 #'   includes code \code{N} (not on certificate). Occupation and industry fields
 #'   are absent.
-"data_multiple_mortality_2004"
+"data_mortality_multiple_2004"
 
 #' @rdname mortality_layouts
 #' @note Geographic identifiers were removed from the public-use file this year
@@ -77,32 +131,37 @@ NULL
 #' @note \code{marital_status} code \code{N} (not on certificate) is removed.
 #'   Both 1989 and 2003 education revision fields are retained. Occupation and
 #'   industry fields are absent.
-"data_multiple_mortality_2005"
+"data_mortality_multiple_2005"
 
 #' @rdname mortality_layouts
 #' @note Layout is structurally identical to 2005. Geographic identifiers remain
 #'   excluded per NCHS data access policy.
 #' @note Both education revision fields are present. Occupation and industry
 #'   fields are absent.
-"data_multiple_mortality_2006"
+"data_mortality_multiple_2006"
 
 #' @rdname mortality_layouts
 #' @note Layout is structurally identical to 2005–2006. Geographic identifiers
 #'   remain excluded per NCHS data access policy.
 #' @note Both education revision fields are present. Occupation and industry
 #'   fields are absent.
-"data_multiple_mortality_2007"
+"data_mortality_multiple_2007"
 
 #' @rdname mortality_layouts
 #' @note Layout is structurally identical to 2005–2007. Geographic identifiers
 #'   remain excluded per NCHS data access policy.
 #' @note Both education revision fields are present. Occupation and industry
 #'   fields are absent.
-"data_multiple_mortality_2008"
+"data_mortality_multiple_2008"
 
 #' @rdname mortality_layouts
 #' @note Layout is structurally identical to 2005–2008. Geographic identifiers
 #'   remain excluded per NCHS data access policy.
 #' @note Both education revision fields are present. Occupation and industry
 #'   fields are absent.
-"data_multiple_mortality_2009"
+"data_mortality_multiple_2009"
+
+#' @rdname mortality_layouts
+#' @note This year introduced a revised race classification schema.
+#' @note Additional cause of death fields were added to the layout this year.
+"data_mortality_multiple_2023"

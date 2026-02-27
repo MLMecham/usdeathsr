@@ -8,7 +8,7 @@
 #' @param data A data frame of mortality records, typically loaded via
 #'   \code{read_fwf()} using a metadata table from this package.
 #' @param meta A metadata tibble with at minimum columns \code{name} and
-#'   \code{codes}, such as \code{data_multiple_mortality_1969}.
+#'   \code{codes}, such as \code{data_mortality_multiple_1969}.
 #' @param first_n Integer. Number of coded columns to decode, starting from
 #'   the first column in \code{meta} that has codes. Default is \code{5}.
 #' @param numbers Integer vector. Additional column indices from \code{meta}
@@ -27,7 +27,7 @@
 #'
 #' @examples
 #' \dontrun{
-#' meta <- data_multiple_mortality_1969
+#' meta <- data_mortality_multiple_1969
 #'
 #' # first 5 coded columns, 1000 rows
 #' decode_preview(mort1969, meta)
@@ -48,6 +48,7 @@
 #' mort1969_decoded <- decode_preview(mort1969, meta, all = TRUE, n_rows = nrow(mort1969))
 #' }
 #'
+#' @importFrom dplyr mutate across all_of slice_head cur_column select
 #' @export
 decode_preview <- function(data, meta, first_n = 5, numbers = NULL, n_rows = 1000, all = FALSE) {
     if (all) {

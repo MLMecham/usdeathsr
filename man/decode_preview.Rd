@@ -18,7 +18,7 @@ decode_preview(
 \code{read_fwf()} using a metadata table from this package.}
 
 \item{meta}{A metadata tibble with at minimum columns \code{name} and
-\code{codes}, such as \code{data_multiple_mortality_1969}.}
+\code{codes}, such as \code{data_mortality_multiple_1969}.}
 
 \item{first_n}{Integer. Number of coded columns to decode, starting from
 the first column in \code{meta} that has codes. Default is \code{5}.}
@@ -48,7 +48,7 @@ committing to a full decode.
 }
 \examples{
 \dontrun{
-meta <- data_multiple_mortality_1969
+meta <- data_mortality_multiple_1969
 
 # first 5 coded columns, 1000 rows
 decode_preview(mort1969, meta)

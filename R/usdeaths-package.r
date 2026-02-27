@@ -3,3 +3,5 @@
 #' @importFrom stats setNames
 #' @importFrom dplyr slice_head mutate across all_of
 "_PACKAGE"
+
+utils::globalVariables("cdc_link_lookup")

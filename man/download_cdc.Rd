@@ -16,12 +16,13 @@ the temporary file where the file was downloaded.
 Uses the \code{cdc_link_lookup} data frame.
 }
 \examples{
-#'\dontrun{
-meta <- data_multiple_mortality_1969
+#'
+\dontrun{
+meta <- data_mortality_multiple_1969
 download <- usdeaths::cdc_link_lookup
 url <- download |>
- filter(section == 'mortality_multiple' & year == 1969) |>
- pull(us_data_url)
+  filter(section == "mortality_multiple" & year == 1969) |>
+  pull(us_data_url)
 path <- download_cdc(url)
 }
 }

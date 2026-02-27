@@ -23,7 +23,7 @@ decode_column <- function(x, codes_str) {
 
     # always pad to match the width of the keys in the lookup
     key_width <- max(nchar(codes[, 1]))
-    x <- str_pad(as.character(x), width = key_width, pad = "0")
+    x <- str_pad(iconv(as.character(x), to = "UTF-8", sub = ""), width = key_width, pad = "0")
 
     # named vector subsetting — unmatched values return NA
     lookup[x]
