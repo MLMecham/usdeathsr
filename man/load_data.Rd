@@ -4,12 +4,22 @@
 \alias{load_data}
 \title{Load CDC Fixed-Width Data}
 \usage{
-load_data(path, meta)
+load_data(
+  path,
+  meta,
+  soffice = "C:/Program Files/LibreOffice/program/soffice.exe"
+)
 }
 \arguments{
 \item{path}{the file path returned from \code{download_cdc()} or the URL to the zip file.}
 
 \item{meta}{the \code{data_} object with the metadata needed to read the fixed width file format.}
+
+\item{soffice}{Character. Path to the LibreOffice executable. Only required
+for 1968-1972 natality files. Defaults to the standard Windows installation
+path. Linux/Mac users will need to override this (e.g.
+\code{"/usr/bin/soffice"} on Linux or
+\code{"/Applications/LibreOffice.app/Contents/MacOS/soffice"} on Mac).}
 }
 \value{
 A tibble for standard datasets, or a named list with \code{denominator}
@@ -25,4 +35,8 @@ cohort data (identified automatically from the URL), it returns a named list
 with two elements: \code{denominator} (all births) and \code{numerator}
 (linked infant death records only). See \code{load_data_birth_cohort()} for
 details on the den/num structure.
+
+CDC natality files from 1968-1972 are distributed as Microsoft Publisher
+(.pub) files and require LibreOffice to convert. Conversion is handled
+automatically but takes 10-20 minutes. See \code{convert_pub()} for details.
 }

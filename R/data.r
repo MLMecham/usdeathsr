@@ -32,11 +32,48 @@ NULL
 
 #' Births Layouts
 #'
-#' Layout data for births files.
+#' Layout data for births files. These layouts define the fixed-width column
+#' positions used to parse CDC natality data files.
+#'
+#' @note Files for 1968-1972 are distributed by CDC as Microsoft Publisher
+#'   (.pub) files which require conversion via LibreOffice before reading.
+#'   Conversion takes approximately 10-20 minutes per file. Pre-converted
+#'   versions of these files are available as a GitHub release to avoid
+#'   this conversion step. See the package README for details.
 #'
 #' @name births_layouts
 #' @docType data
 NULL
+
+#' @rdname births_layouts
+"data_births_1968"
+
+#' @rdname births_layouts
+"data_births_1969"
+
+#' @rdname births_layouts
+"data_births_1970"
+
+#' @rdname births_layouts
+"data_births_1971"
+
+#' @rdname births_layouts
+"data_births_1972"
+
+#' @rdname births_layouts
+"data_births_1973"
+
+#' @rdname births_layouts
+"data_births_1974"
+
+#' @rdname births_layouts
+"data_births_1975"
+
+#' @rdname births_layouts
+"data_births_1976"
+
+#' @rdname births_layouts
+"data_births_1977"
 
 #' @rdname births_layouts
 "data_births_1978"
